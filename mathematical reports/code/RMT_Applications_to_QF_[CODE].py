@@ -2480,9 +2480,7 @@ mu = R.mean(axis=1).reshape(-1, 1)
 R_centered = R - mu
 S_1 = (1 / (T - 1)) * R_centered @ R_centered.T
 
-# ==============================================================================
-# 2. HELPER FUNCTIONS
-# ==============================================================================
+
 def get_mp_median(q_val):
     """Numerically calculates the theoretical median of the standard MP distribution."""
     lam_min = (1 - np.sqrt(q_val))**2
@@ -2504,9 +2502,7 @@ def get_mp_median(q_val):
 evals, evecs = np.linalg.eigh(S_1)
 evals = np.maximum(evals, 1e-10)
 
-# ==============================================================================
-# 3. ESTIMATORS: S_3 (Eigenvalue Clipping)
-# ==============================================================================
+
 
 # --- S_3 (MEAN) ---
 sigma_sq_mean = np.mean(evals)
@@ -2544,9 +2540,7 @@ print(f"Threshold using Median : {lambda_plus_med:.6f}")
 print("="*60 + "\n")
 
 
-# ==============================================================================
-# 4. OUT-OF-SAMPLE EVALUATION (2026)
-# ==============================================================================
+
 def get_gmv_weights(cov_matrix):
     inv_cov = np.linalg.pinv(cov_matrix)
     ones = np.ones(len(inv_cov))
@@ -2594,9 +2588,7 @@ print("="*60)
 print(metrics_df.to_markdown(colalign=("left", "right", "right")))
 print("="*60 + "\n")
 
-# ==============================================================================
-# 5. PLOTTING: EQUITY CURVES & EIGENVALUE SPECTRA
-# ==============================================================================
+
 
 # --- Equity Curves ---
 cumulative_returns = (1 + portfolio_returns).cumprod()
@@ -2786,9 +2778,7 @@ import seaborn as sns
 
 sns.set_style("whitegrid")
 
-# ==============================================================================
-# 1. FETCH DATA (2023-2025 S&P 500 setup)
-# ==============================================================================
+
 print("Downloading S&P 500 data...")
 sp500 = pd.read_csv("https://raw.githubusercontent.com/datasets/s-and-p-500-companies/master/data/constituents.csv")
 tickers = [t.replace(".", "-") for t in sp500["Symbol"]]
@@ -2809,9 +2799,7 @@ R = returns.T.to_numpy()
 N, T = R.shape
 q = N / T
 
-# ==============================================================================
-# 2. ORIGINAL PCA
-# ==============================================================================
+
 mu = R.mean(axis=1).reshape(-1, 1)
 R_centered = R - mu
 S_orig = (1 / (T - 1)) * (R_centered @ R_centered.T)
@@ -2819,9 +2807,7 @@ S_orig = (1 / (T - 1)) * (R_centered @ R_centered.T)
 # Eigenvalues are sorted ascending by default in numpy
 evals_orig, evecs_orig = np.linalg.eigh(S_orig)
 
-# ==============================================================================
-# 3. BOOTSTRAP RESAMPLING (ALL EIGENVECTORS)
-# ==============================================================================
+
 B = 500 # Number of iterations (500 is plenty for a stable mean)
 all_overlaps = np.zeros((B, N))
 
@@ -2850,9 +2836,7 @@ for i in range(B):
 # Calculate the mean reliability for each eigenvector across all B iterations
 mean_reliability = np.mean(all_overlaps, axis=0)
 
-# ==============================================================================
-# 4. VISUALIZATION
-# ==============================================================================
+
 # Calculate Marchenko-Pastur upper bound for context
 sigma_sq = np.median(evals_orig) # Quick robust variance estimate
 lam_max_mp = sigma_sq * (1 + np.sqrt(q)) ** 2
