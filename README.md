@@ -32,9 +32,3 @@ My undergraduate mathematics capstone report. The full report is provided for re
 ## About this portfolio
 
 These reports are examples of my academic work rather than production software projects. I am particularly interested in opportunities to apply mathematical reasoning, probability, and computational methods to real-world problems.
-
-**Note:** Reports are shared for academic and recruitment purposes. Any code added to this repository will be documented separately, with clear instructions for reproducibility.
-
-## Contact
-
-[GitHub profile](https://github.com/dallenleeyx)
