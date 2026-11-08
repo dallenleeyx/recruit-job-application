@@ -20,7 +20,7 @@ An undergraduate research project investigating random band matrices, with a foc
 
 An undergraduate research project exploring random matrix theory and its connections to covariance estimation. It reflects my interest in mathematical tools for studying high-dimensional data and the relationship between theory and statistical applications.
 
-[View accompanying Python code](mathematical%20reports/code/RMT_Applications_to_QF_%5BCODE%5D.py)
+Code can be found [here](mathematical%20reports/code/RMT_Applications_to_QF_%5BCODE%5D.py)
 
 The accompanying Python script includes simulations of covariance matrices and eigenvalue distributions, comparisons with the Marchenko–Pastur law, and experiments with covariance estimators.
 
