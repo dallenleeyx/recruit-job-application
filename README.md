@@ -8,22 +8,26 @@ I enjoy the process of constructing rigorous mathematical arguments: starting fr
 
 ## Research reports
 
-### Random band matrices — MA4288X
-[Read the report (PDF)](mathematical%20reports/MA4288X_Report.pdf)
+### Anderson localisation in random band matrices — MA4288X
+[Read the report (PDF)](mathematical%20reports/Anderson_Localisation.pdf)
 
 An undergraduate research project investigating random band matrices, with a focus on eigenvector localisation and the behaviour of random operators. The work involved studying probabilistic arguments and mathematical bounds, examining assumptions, and exploring numerical examples alongside theoretical analysis.
 
 **Relevant areas:** Probability theory · Random matrix theory · Mathematical analysis · Numerical investigation
 
-### Random matrix theory — UROPS
-[Read the report (PDF)](mathematical%20reports/UROPS_Project_Report__RMT_.pdf)
+### Random matrix theory: applications to quantitative finance — UROPS
+[Read the report (PDF)](mathematical%20reports/Random_Matrix_Theory_Applications_to_QF.pdf)
 
 An undergraduate research project exploring random matrix theory and its connections to covariance estimation. It reflects my interest in mathematical tools for studying high-dimensional data and the relationship between theory and statistical applications.
 
-**Relevant areas:** Random matrix theory · Covariance estimation · Statistics · High-dimensional data
+[View accompanying Python code](mathematical%20reports/code/RMT_Applications_to_QF_%5BCODE%5D.py)
 
-### Mathematics capstone — MA4198
-[Read the report (PDF)](mathematical%20reports/MA4198_Project_Report.pdf)
+The accompanying Python script includes simulations of covariance matrices and eigenvalue distributions, comparisons with the Marchenko–Pastur law, and experiments with covariance estimators.
+
+**Relevant areas:** Random matrix theory · Covariance estimation · Statistics · High-dimensional data · Python
+
+### When Decision Is Possible — MA4198
+[Read the report (PDF)](mathematical%20reports/When-Decision-is-Possible.pdf)
 
 My undergraduate mathematics capstone report. The full report is provided for readers interested in the mathematical problem, methods, and arguments presented in this project.
 
@@ -31,4 +35,4 @@ My undergraduate mathematics capstone report. The full report is provided for re
 
 ## About this portfolio
 
-These reports are examples of my academic work rather than production software projects. I am particularly interested in opportunities to apply mathematical reasoning, probability, and computational methods to real-world problems.
+These reports and the accompanying research code document my academic work rather than production software projects. I am particularly interested in opportunities to apply mathematical reasoning, probability, and computational methods to real-world problems.
